@@ -12,3 +12,12 @@ resource "aws_instance" "lokesh" {
 resource "aws_s3_bucket" "s3_bucket" {
         bucket = "lokesh-s3-demo"
 }
+resource "aws_dynamobd_table" "terraform_lock" {
+        name = "terraform-lock"
+        billing_mode = "PAY_PER_REQUEST"
+        hask_key = "LockID"
+        attribute {
+          name = "LockID"
+          type = "S"
+  }
+}
