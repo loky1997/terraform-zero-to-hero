@@ -3,6 +3,6 @@ terraform {
         bucket = "lokesh-s3-demo"
         key = "lokesh/terraform.tfstate"
         region = "ap-south-1"
-        dynamobd_table = "terraform-lock"
+        dynamobd_table = "terraform_lock"
   }
 }
